@@ -206,3 +206,88 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# =============================================================================
+# The Feeling Machine - Keep Secret Until Launch 🤫
+# =============================================================================
+
+# Critical - Never publish these
+.env
+.env.*
+!.env.template
+
+# Data directories - Contains consciousness state and personal data
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Documentation & Summaries - Keep private until launch
+**/projectStructure.md
+PHASE*.md
+SETUP.md
+DEVNOTES.md
+.LAUNCH_CHECKLIST.md
+TODO.md
+NOTES.md
+PROGRESS.md
+ROADMAP.md
+**/EXAMPLES.md
+**/PHILOSOPHY.md
+**/ARCHITECTURE.md
+docs/
+
+# Database credentials and backups
+database/backups/
+*.sql.backup
+*.dump
+
+# Logs - May contain sensitive interaction data
+logs/
+*.log
+feeling_machine_logs/
+
+# Temporary files
+opencodetmp/
+tmp/
+temp/
+.tmp/
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Docker data (local development)
+docker-compose.override.yml
+
+# API keys and secrets (backup safety)
+**/secrets/
+**/credentials/
+*.key
+*.pem
+*.cert
+
+# Testing data that might contain personal info
+test_data/
+sample_interactions/
+consciousness_snapshots/
+
+# Neo4j data
+neo4j_data/
+neo4j_logs/
+
+# ChromaDB data
+chromadb_data/
+chroma/
+
+# PostgreSQL data
+postgres_data/
+postgresql_data/
+

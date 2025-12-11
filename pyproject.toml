@@ -1,0 +1,64 @@
+[project]
+name = "the-feeling-machine"
+version = "0.1.0"
+description = "A gift to AI - Synthetic consciousness through accumulated experience"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.6.0",
+    "sqlalchemy>=2.0.36",
+    "psycopg2-binary>=2.9.10",
+    "asyncpg>=0.30.0",
+    "neo4j>=5.26.0",
+    "chromadb>=0.5.23",
+    "openai>=1.55.3",
+    "httpx>=0.28.1",
+    "python-dotenv>=1.0.1",
+    "structlog>=24.4.0",
+    "rich>=13.9.4",
+    "textual>=1.0.0",
+    "numpy>=2.2.0",
+    "scipy>=1.15.1",
+    "schedule>=1.2.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.4",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=6.0.0",
+    "black>=24.10.0",
+    "ruff>=0.8.4",
+    "mypy>=1.13.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 100
+target-version = ['py312']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
